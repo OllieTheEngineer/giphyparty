@@ -34,4 +34,4 @@ searchBtn.addEventListener("click", searchAPI());
 
 // function(evt){
 //   evt.preventDefault();
-//   let searches = searchText.searchAPI();
+//   
