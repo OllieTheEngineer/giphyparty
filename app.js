@@ -29,9 +29,8 @@ const searchAPI = (evt) => {
   .catch(function (error) {
     console.log(error);
   });
-  searchBtn.addEventListener("click", searchAPI);
 }
-
+searchBtn.addEventListener("click", searchAPI);
 // searchAPI(); // Take your onClick event listener search button and call searchAPI(). So remove this once that's done.
 
 // Function to remove all gifs from Giph area
