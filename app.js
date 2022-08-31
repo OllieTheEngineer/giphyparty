@@ -4,7 +4,7 @@ const removeBtn = document.getElementById('remove');
 // const searchText = document.getElementById('search_input');
 
 const searchAPI = (evt) => {
-  evt.preventDEfault(); {
+  evt.preventDefault();
   let searchWord = document.getElementById('search_text').value; // Read the textbox from your form
 
   let config = {
@@ -29,10 +29,11 @@ const searchAPI = (evt) => {
   .catch(function (error) {
     console.log(error);
   });
-  }
+  searchBtn.addEventListener("click", searchAPI);
 }
+
 // searchAPI(); // Take your onClick event listener search button and call searchAPI(). So remove this once that's done.
-searchBtn.addEventListener("click", searchAPI);
+
 // Function to remove all gifs from Giph area
 removeBtn.addEventListener("click", function(evt){
 evt.gifyDivEl.empty();
