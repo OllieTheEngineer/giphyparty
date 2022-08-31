@@ -37,6 +37,4 @@ searchBtn.addEventListener("click", searchAPI);
 removeBtn.addEventListener("click", function(evt){
 evt.gifyDivEl.empty();
 })
-// function(evt){
-//   evt.preventDefault();
-//   
+

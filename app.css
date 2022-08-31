@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(to right,cyan, purple, black);
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 300%;
+    font-weight: bolder;
+}
+
+button {
+    font-weight: bold;
+    border-radius: 10%;
+}
+
+button:hover {
+    color: white;
+    background-color: black;
+    border-radius: 10%;
+}
+
