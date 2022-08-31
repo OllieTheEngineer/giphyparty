@@ -1,11 +1,13 @@
 const gifyDivEl = document.getElementById('giphies');
 const searchBtn = document.getElementById('Search');
+const removeBtn = document.getElementById('remove');
 // const searchText = document.getElementById('search_input');
 
-const searchAPI = () => {
+const searchAPI = (evt) => {
+  evt.preventDEfault(); {
   let searchWord = document.getElementById('search_text').value; // Read the textbox from your form
 
-  var config = {
+  let config = {
     method: 'get',
     url: `https://api.giphy.com/v1/gifs/search?q=${searchWord}&api_key=MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym`,
   };
@@ -27,11 +29,14 @@ const searchAPI = () => {
   .catch(function (error) {
     console.log(error);
   });
+  }
 }
-searchBtn.addEventListener("click", searchAPI());
 // searchAPI(); // Take your onClick event listener search button and call searchAPI(). So remove this once that's done.
-
-
+searchBtn.addEventListener("click", searchAPI);
+// Function to remove all gifs from Giph area
+removeBtn.addEventListener("click", function(evt){
+evt.gifyDivEl.empty();
+})
 // function(evt){
 //   evt.preventDefault();
 //   
